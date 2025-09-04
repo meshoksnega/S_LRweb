@@ -4,127 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S_LR - Simple Rig for Simple Things</title>
-    <meta name="description" content="S_LR (С Лишним Ригом) - A simple rig for simple things. Download, guides, and resources.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
             <div class="header-content">
                 <div class="header-text">
-                    <h1 class="rig-title">S_LR</h1>
-                    <p class="tagline">Simple Rig for Simple Things</p>
-                    <a href="https://github.com/meshoksnega/S_LR-Rig/releases/tag/Beta" 
-                       class="download-btn" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        <span class="btn-icon">↓</span>
-                        Download
+                    <h1 class="rig-name">S_LR</h1>
+                    <p class="tagline">"Simple Rig for Simple Things"</p>
+                    <a href="https://github.com/meshoksnega/S_LR-Rig/releases/tag/Beta" class="download-btn" target="_blank">
+                        <span class="btn-icon">⬇</span>
+                        Download Latest Release
                     </a>
                 </div>
                 <div class="header-image">
-                    <img src="imgs/S_LRicon.png" alt="S_LR Rig Showcase" class="showcase-image">
+                    <img src="imgs/S_LRicon.png" alt="S_LR Rig Showcase" class="rig-showcase">
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- Quick Links & Resources -->
-        <section class="resources">
+    <!-- Quick Links & Resources Section -->
+    <section class="resources">
+        <div class="container">
             <h2 class="section-title">Quick Links & Resources</h2>
             <div class="resources-grid">
-                <div class="resource-card">
+                <a href="https://github.com/meshoksnega/S_LR-Rig/releases/tag/Beta" class="resource-card" target="_blank">
+                    <div class="resource-icon">🚀</div>
                     <h3>GitHub Releases</h3>
-                    <p>Download the latest version and access source code</p>
-                    <a href="https://github.com/meshoksnega/S_LR-Rig/releases/tag/Beta" 
-                       class="resource-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        View Releases →
-                    </a>
-                </div>
-                
-                <div class="resource-card">
+                    <p>Download the latest version</p>
+                </a>
+                <a href="https://t.me/mine_3d" class="resource-card" target="_blank">
+                    <div class="resource-icon">💬</div>
                     <h3>Telegram Channel</h3>
-                    <p>Join the community for updates and discussions</p>
-                    <a href="https://t.me/mine_3d" 
-                       class="resource-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                        Join Channel →
-                    </a>
-                </div>
-                
-                <div class="resource-card author-card">
+                    <p>Join our community</p>
+                </a>
+                <div class="author-card">
+                    <img src="imgs/SusieHead.png" alt="S_LS Avatar" class="author-avatar">
                     <div class="author-info">
-                        <img src="imgs/SusieHead.png" alt="S_LS Avatar" class="author-avatar">
-                        <div class="author-text">
-                            <h3>Author</h3>
-                            <p><strong>S_LS</strong> (@Meshok_Snega)</p>
-                        </div>
+                        <h3>S_LS</h3>
+                        <p>@Meshok_Snega</p>
+                        <span class="author-label">Author</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Guide Section -->
-        <section class="guide">
+    <!-- Guide Section -->
+    <section class="guide">
+        <div class="container">
             <h2 class="section-title">How to Change Faces</h2>
             <div class="guide-steps">
-                <div class="guide-step">
+                <div class="step">
+                    <div class="step-number">1</div>
                     <div class="step-content">
-                        <div class="step-text">
-                            <div class="step-number">01</div>
-                            <h3>Select a Face</h3>
-                            <p>Select a face in the <em>Face</em> collection or directly in the viewport to begin the customization process.</p>
-                        </div>
-                        <div class="step-image">
-                            <img src="imgs/Guide/FacePick.png" alt="Face Selection Process" class="guide-image">
-                        </div>
+                        <h3>Select a Face</h3>
+                        <p>Select a face in the Face collection or directly in the viewport</p>
+                        <img src="imgs/Guide/FacePick.png" alt="Face selection guide" class="guide-image" data-lightbox="guide">
                     </div>
                 </div>
-
-                <div class="guide-step">
+                <div class="step">
+                    <div class="step-number">2</div>
                     <div class="step-content">
-                        <div class="step-text">
-                            <div class="step-number">02</div>
-                            <h3>Draw a Face</h3>
-                            <p>Create your custom face with the required resolution of <strong>18x18 pixels</strong>. Save your faces in a dedicated folder, naming them Face0, Face1, Face2, etc.</p>
-                        </div>
-                        <div class="step-image">
-                            <img src="imgs/Guide/FaceMakin.png" alt="Face Creation Process" class="guide-image">
-                        </div>
+                        <h3>Draw a Face</h3>
+                        <p>Draw a face (resolution 18×18 px). Save faces in a dedicated folder named Face0, Face1, Face2, etc.</p>
+                        <img src="imgs/Guide/FaceMakin.png" alt="Face creation guide" class="guide-image" data-lightbox="guide">
                     </div>
                 </div>
-
-                <div class="guide-step">
+                <div class="step">
+                    <div class="step-number">3</div>
                     <div class="step-content">
-                        <div class="step-text">
-                            <div class="step-number">03</div>
-                            <h3>Import & Switch</h3>
-                            <p>Open the <em>Shader Editor</em>. Click the folder icon and import your face textures using <strong>Shift</strong> or <strong>Ctrl</strong> for multiple selections. Use the <strong>Offset</strong> slider to switch between faces.</p>
-                        </div>
-                        <div class="step-image">
-                            <img src="imgs/Guide/FaceChange.png" alt="Face Import and Switching" class="guide-image">
-                        </div>
+                        <h3>Import and Switch</h3>
+                        <p>Open the Shader Editor, import multiple faces with Shift/Ctrl, use Offset slider to switch faces</p>
+                        <img src="imgs/Guide/FaceChange.png" alt="Face switching guide" class="guide-image" data-lightbox="guide">
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2024 S_LR Rig by S_LS. Simple Rig for Simple Things.</p>
-        </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 S_LR Rig by S_LS (@Meshok_Snega). Simple Rig for Simple Things.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-image" src="" alt="">
+        </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
