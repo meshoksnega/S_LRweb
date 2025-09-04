@@ -83,20 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(-4px)';
         });
     });
+});
 
-    // Lightbox functionality
-    function createLightbox() {
-        const lightbox = document.createElement('div');
-        lightbox.className = 'lightbox';
-        lightbox.innerHTML = `
-            <button class="lightbox-close">&times;</button>
-            <img class="lightbox-image" src="" alt="">
-        `;
-        document.body.appendChild(lightbox);
-        return lightbox;
-    }
-
-    const lightbox = createLightbox();
-    const lightboxImage = lightbox.querySelector('.lightbox-image');
-    const lightboxClose = lightbox.querySelector('.lightbox-close');
-
+// Add CSS class for loaded images
+document.head.insertAdjacentHTML('beforeend', `
+    <style>
+        img {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+    </style>
+`);
