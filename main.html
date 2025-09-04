@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>S_LR — Simple Rig for Simple Things</title>
+  <meta name="description" content="S_LR (С Лишним Ригом) — lightweight Blender rig (beta) with Steve/Alex arm options." />
+  <!-- VT323 font -->
+  <style>
+    /* Dark theme — no white anywhere */
+    :root{
+      --bg:#060607;
+      --panel:#0f1213;
+      --muted:#9aa4ad;
+      --accent:#18a999;
+      --accent-2:#6b8cff;
+      --glass: rgba(255,255,255,0.02);
+      --card-shadow: 0 8px 30px rgba(0,0,0,0.7);
+      --download-grad: linear-gradient(135deg,var(--accent),var(--accent-2));
+    }
+    *{box-sizing:border-box}
+    /* Apply VT323 to all elements */
+    html, body, * { font-family: monospace; }
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#050506);
+      color:#e6eef2;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      font-size:16px;
+    }
+
+    .container{max-width:1100px;margin:28px auto;padding:22px}
+    header{display:flex;align-items:center;gap:18px}
+
+    .hero{
+      display:flex;gap:20px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);box-shadow:var(--card-shadow)
+    }
+
+    .logo-wrap{width:120px;height:120px;flex:0 0 120px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--glass);overflow:hidden}
+    .logo-wrap img{width:100%;height:100%;object-fit:cover}
+
+    h1{margin:0;font-size:26px}
+    p.lead{color:var(--muted);margin-top:6px}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:18px}
+
+    .card{background:var(--panel);border-radius:12px;padding:18px;box-shadow:var(--card-shadow)}
+
+    .feature-list{display:grid;gap:12px}
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .dot{width:10px;height:10px;border-radius:2px;background:var(--accent);margin-top:6px}
+    .feature strong{display:block}
+    .muted{color:var(--muted);font-size:13px}
+
+    .download-row{display:flex;align-items:center;gap:12px;margin-top:12px}
+    .download-btn{
+      display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;background:var(--download-grad);color:#031014;font-weight:700;border:none;cursor:pointer;text-decoration:none;box-shadow:0 8px 20px rgba(24,169,153,0.18)
+    }
+    .download-sub{color:var(--muted);font-size:13px}
+
+    .author{display:flex;gap:12px;align-items:center;margin-top:12px}
+    .avatar{width:44px;height:44px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .author .name{font-weight:600}
+    .author .meta{font-size:13px;color:var(--muted)}
+
+    a.link{color:var(--accent);text-decoration:none}
+
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Guide section */
+    .guide-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:18px}
+    .guide-card img{max-width:1000px;width:250%;border-radius:8px;margin-bottom:12px}
+
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .hero{flex-direction:column;align-items:flex-start}
+      .logo-wrap{width:96px;height:96px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="logo-wrap">
+        <img src="imgs/S_LRicon.png" alt="S_LR icon">
+      </div>
+      <div style="flex:1">
+        <h1>S_LR (С Лишним Ригом)</h1>
+        <p class="lead">Simple Rig for Simple Things — lightweight Blender rig for Minecraft-style models. Beta.</p>
+
+        <div class="download-row">
+          <a class="download-btn" href="https://github.com/meshoksnega/S_LR-Rig/releases/tag/Beta" target="_blank" rel="noopener">Download Beta — GitHub Releases</a>
+          <div class="download-sub">Release assets include <code>.blend</code> and setup scripts</div>
+        </div>
+
+        <div class="author">
+          <div class="avatar"><img src="imgs/SusieHead.png" alt="Author"></div>
+          <div>
+            <div class="name">Author: S_LS (@Meshok_Snega)</div>
+            <div class="meta">Telegram: <a class="link" href="https://t.me/mine_3d" target="_blank">t.me/mine_3d</a></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <div class="card">
+          <h3>About</h3>
+          <p class="muted">S_LR is a minimal, focused rig for blocky Minecraft-style characters. Designed to be simple to use: clear bone naming, per-arm Steve/Alex options, and quick setup scripts for visibility switching.</p>
+
+          <div style="height:12px"></div>
+          <div class="feature-list">
+            <div class="feature"><div class="dot"></div><div><strong>Per-arm settings</strong><span class="muted">Independent left/right arm configuration via setting bones.</span></div></div>
+            <div class="feature"><div class="dot"></div><div><strong>Steve / Alex support</strong><span class="muted">Classic and slim arms supported out of the box.</span></div></div>
+            <div class="feature"><div class="dot"></div><div><strong>Beta</strong><span class="muted">Early release — expect small rough edges, PRs welcome.</span></div></div>
+          </div>
+
+          <hr style="border:none;height:1px;background:rgba(255,255,255,0.03);margin:18px 0">
+
+          <h3>Guide: How to Change the Face</h3>
+          <div class="guide-grid">
+            <div class="card guide-card">
+              <h4>Step 1 — Pick a Face</h4>
+              <img src="imgs/Guide/FacePick.png" alt="Pick a face">
+              <p class="muted">Select the face object from the <b>Face collection</b> or directly in the viewport.</p>
+            </div>
+            <div class="card guide-card">
+              <h4>Step 2 — Create Your Texture</h4>
+              <img src="imgs/Guide/FaceMakin.png" alt="Make a face">
+              <p class="muted">Draw your face with a resolution of <b>18 × 18 px</b>. Save them as <code>Face0</code>, <code>Face1</code>, <code>Face2</code>… in a dedicated folder.</p>
+            </div>
+            <div class="card guide-card">
+              <h4>Step 3 — Assign & Switch</h4>
+              <img src="imgs/Guide/FaceChange.png" alt="Change face">
+              <p class="muted">In the <b>Shader Editor</b>, click the folder icon and select multiple faces at once (hold <b>Shift</b> or <b>Ctrl</b>). Use the <b>Offset</b> slider to switch between faces.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="height:16px"></div>
+        <div class="card docs">
+          <h4>License & Contributing</h4>
+          <p class="muted">Open source. Contributions, issues and pull requests are welcome on the GitHub repo. Include concise reproduction steps for bugs.</p>
+        </div>
+      </main>
+
+      <aside>
+        <div class="card">
+          <h4>Resources</h4>
+          <p class="muted">Release on GitHub</p>
+          <p><a class="link" href="https://github.com/meshoksnega/S_LR-Rig/releases/tag/Beta" target="_blank" rel="noopener">S_LR Beta Release</a></p>
+
+          <div style="height:12px"></div>
+          <h4>Quick links</h4>
+          <p class="muted"><a class="link" href="https://github.com/meshoksnega/S_LR-Rig" target="_blank">Repo</a> • <a class="link" href="https://github.com/meshoksnega/S_LR-Rig/releases/tag/Beta" target="_blank">Releases</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      S_LR • Beta — Simple Rig for Simple Things
+    </footer>
+  </div>
+</body>
+</html>
