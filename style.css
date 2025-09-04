@@ -98,44 +98,6 @@ body {
     animation: fadeInRight 0.8s ease-out 0.2s both;
 }
 
-.lightbox {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-}
-
-.lightbox.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-}
-
-#lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 36px;
-  color: #fff;
-  cursor: pointer;
-  user-select: none;
-}
-
-
-
 .showcase-image {
     max-width: 100%;
     height: auto;
@@ -541,85 +503,6 @@ html {
 ::selection {
     background: rgba(0, 255, 136, 0.3);
     color: #ffffff;
-}
-
-/* Lightbox Styles */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.lightbox.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.lightbox-image {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
-    transform: scale(0.8);
-    transition: transform 0.3s ease;
-}
-
-.lightbox.active .lightbox-image {
-    transform: scale(1);
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    color: #ffffff;
-    font-size: 2rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.lightbox-close:hover {
-    background: rgba(255, 68, 68, 0.3);
-    transform: scale(1.1);
-}
-
-/* Make images clickable */
-.showcase-image,
-.guide-image,
-.author-avatar {
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.showcase-image:hover,
-.guide-image:hover {
-    transform: scale(1.02);
-    box-shadow: 0 25px 80px rgba(0, 255, 136, 0.3);
-}
-
-.author-avatar:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 24px rgba(0, 255, 136, 0.4);
 }
 
 /* Loading Animation */
